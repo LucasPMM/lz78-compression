@@ -5,9 +5,10 @@ def compress(input_file, output_file):
     with open(input_file, 'r') as file:
         text = file.read()
         with open(output_file, 'wb') as file:
-            trie = CTrie.Trie('', numeric_value=0)
-            chain = ''
             index = 1
+            chain = ''
+            trie = CTrie.Trie('', numeric_value=0)
+
             for c in text:
                 contains = trie.contains(chain + c)
                 if contains != -1:
@@ -19,6 +20,7 @@ def compress(input_file, output_file):
                     file.write(ord(c).to_bytes(1, 'big'))
                     index += 1
                     chain = ''
+
             file.write((trie.contains(chain)).to_bytes(3, "big"))
 
     ####### ONLY FOR TESTS #######

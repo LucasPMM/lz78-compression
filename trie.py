@@ -3,9 +3,9 @@ from typing import Union, Tuple
 class Trie:
     def __init__(self, value='', numeric_value=None, parent=None, empty=True):
         self.value = value
+        self.empty = empty
         self.numeric_value = numeric_value
         self.parent = parent
-        self.empty = empty
         self.children = {}
 
     def _get_prefix(self, word):
@@ -19,6 +19,9 @@ class Trie:
         return res
 
     def contains(self, word):
+        # if word == '' and '' in self.children.keys():
+        #     return self.children[''].numeric_value
+
         if word == self.value and self.numeric_value != None:
             return self.numeric_value
 
@@ -29,13 +32,6 @@ class Trie:
 
     def add(self, word, value):
         self._add(word, value)
-
-    def _add_node(self, value, node):
-        if (node == None):
-            node = Trie()
-        node.parent = self
-        node.value = value
-        self.children[value] = node
 
     def _add(self, word, value):
         index, key = self._get_prefix(word)
@@ -55,3 +51,10 @@ class Trie:
             self._add_node(prefix, None)
             self.children[prefix]._add_node(word[index:], Trie(empty=False, numeric_value=value))
             self.children[prefix]._add_node(key[index:], temp)
+
+    def _add_node(self, value, node):
+        if (node == None):
+            node = Trie()
+        node.parent = self
+        node.value = value
+        self.children[value] = node
