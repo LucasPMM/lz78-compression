@@ -19,14 +19,10 @@ class Trie:
         return res
 
     def contains(self, word):
-        if word == '' and '' in self.children.keys():
-            return self.children[''].numeric_value
-        if word == self.value:
-            if self.numeric_value != None:
-                return self.numeric_value
+        if word == self.value and self.numeric_value != None:
+            return self.numeric_value
 
         index, key = self._get_prefix(word)
-
         if key == None:
             return -1
         return self.children[key].contains(word[index:])
@@ -53,9 +49,9 @@ class Trie:
         elif index == len(key):
             self.children[key].add(word[index:], value)
         else:
-            index = word[:index]
+            prefix = word[:index]
             temp = self.children.pop(key)
             temp.value = key[index:]
-            self._add_node(index, None)
-            self.children[index]._add_node(word[index:], Trie(empty=False, numeric_value=value))
-            self.children[index]._add_node(key[index:], temp)
+            self._add_node(prefix, None)
+            self.children[prefix]._add_node(word[index:], Trie(empty=False, numeric_value=value))
+            self.children[prefix]._add_node(key[index:], temp)

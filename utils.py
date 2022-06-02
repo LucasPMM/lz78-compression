@@ -10,7 +10,7 @@ def show_statistics(input, output):
     input_stats = os.stat(input)
     output_stats = os.stat(output)
     ratio = (output_stats.st_size / input_stats.st_size) * 100
-    print('Compress ratio ' + ratio + "%")
+    print('Compress ratio ' + str(ratio) + "%")
     return
 
 def is_input_invalid(input):
