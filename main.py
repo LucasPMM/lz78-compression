@@ -17,11 +17,9 @@ if __name__ == "__main__":
         raise Exception("Ex: ./main.py -[c | x] file.[txt | lz78] [-o result_file_name]")
 
     is_compress = input[1] == "-c"
-    is_decompress = input[1] == "-x"
 
     if is_compress:
         compression.compress(input[2], output_name(input, '.z78'))
-    elif is_decompress:
-        decompression.decompress(input[2], output_name(input, '.txt'))
     else:
-        print('Invalid input')
+        decompression.decompress(input[2], output_name(input, '.txt'))
+   
