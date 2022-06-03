@@ -4,6 +4,7 @@ import compression
 import decompression
 import utils
 
+# Mount output file name
 def output_name(input, extension):
     if len(input) == 5:
         return input[4] + extension
