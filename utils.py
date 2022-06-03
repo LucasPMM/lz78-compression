@@ -1,18 +1,23 @@
 import os
 
+# Write data on a file
 def write_file(name, data):
     file = open(name, 'w')
     file.write(data)
     file.close()
     return
 
+# Show compression / decompression statistics
 def show_statistics(input, output):
     input_stats = os.stat(input)
     output_stats = os.stat(output)
     ratio = (output_stats.st_size / input_stats.st_size) * 100
-    print('Compress ratio ' + str(ratio) + "%")
+    print('Input ' + str(input_stats.st_size) + ' bytes')
+    print('Output ' + str(output_stats.st_size) + ' bytes')
+    print('Compression ratio ' + str(round(ratio, 2)) + "%")
     return
 
+# Def if user input is valid
 def is_input_invalid(input):
     possible_args = [3, 5]
     possible_actions = ['-c', '-x']
