@@ -1,0 +1,49 @@
+Compression: test1.txt -> test1.z78
+Input 1004 bytes
+Output 1792 bytes
+Compression ratio +78.49%
+
+Compression: test2.txt -> test2.z78
+Input 5020 bytes
+Output 6484 bytes
+Compression ratio +29.16%
+
+Compression: test3.txt -> test3.z78
+Input 10040 bytes
+Output 11008 bytes
+Compression ratio +9.64%
+
+Compression: test4.txt -> test4.z78
+Input 50162 bytes
+Output 43268 bytes
+Compression ratio -13.74%
+
+Compression: test5.txt -> test5.z78
+Input 100324 bytes
+Output 74156 bytes
+Compression ratio -26.08%
+
+Compression: test6.txt -> test6.z78
+Input 200648 bytes
+Output 129836 bytes
+Compression ratio -35.29%
+
+Compression: test7.txt -> test7.z78
+Input 501620 bytes
+Output 279404 bytes
+Compression ratio -44.3%
+
+Compression: test8.txt -> test8.z78
+Input 1003240 bytes
+Output 502368 bytes
+Compression ratio -49.93%
+
+Compression: test9.txt -> test9.z78
+Input 1504860 bytes
+Output 705752 bytes
+Compression ratio -53.1%
+
+Compression: test10.txt -> test10.z78
+Input 2006480 bytes
+Output 927028 bytes
+Compression ratio -53.8%

@@ -14,7 +14,9 @@ def show_statistics(input, output):
     ratio = (output_stats.st_size / input_stats.st_size) * 100
     print('Input ' + str(input_stats.st_size) + ' bytes')
     print('Output ' + str(output_stats.st_size) + ' bytes')
-    print('Compression ratio ' + str(round(ratio, 2)) + "%")
+    # if positive: file increased
+    # if negative: file decreased
+    print('Compression ratio ' + str(round(ratio - 100, 2)) + "%")
     return
 
 # Def if user input is valid
