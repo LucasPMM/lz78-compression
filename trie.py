@@ -22,8 +22,8 @@ class Trie:
 
     # Returns if the trie contains the word 
     def contains(self, word):
-        if word == '' and '' in self.children.keys():
-            return self.children[''].numeric_value
+        # if word == '' and '' in self.children.keys():
+        #     return self.children[''].numeric_value
 
         if word == self.value and self.numeric_value != None:
             return self.numeric_value
