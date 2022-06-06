@@ -1,3 +1,5 @@
+//Eficiente: 
+
 Compression: test1.txt -> test1.z78
 Input 1004 bytes
 Output 1792 bytes
@@ -47,3 +49,55 @@ Compression: test10.txt -> test10.z78
 Input 2006480 bytes
 Output 927028 bytes
 Compression ratio -53.8%
+
+// Preciso
+
+Compression: test1.txt -> test1.z78
+Input 1001 bytes
+Output 4004 bytes
+Compression ratio 300.0%
+
+Compression: test2.txt -> test2.z78
+Input 5018 bytes
+Output 20072 bytes
+Compression ratio 300.0%
+
+Compression: test3.txt -> test3.z78
+Input 10038 bytes
+Output 40152 bytes
+Compression ratio 300.0%
+
+Compression: test4.txt -> test4.z78
+Input 50156 bytes
+Output 200624 bytes
+Compression ratio 300.0%
+
+Compression: test5.txt -> test5.z78
+Input 100322 bytes
+Output 401288 bytes
+Compression ratio 300.0%
+
+Compression: test6.txt -> test6.z78
+Input 200642 bytes
+Output 802568 bytes
+Compression ratio 300.0%
+
+Compression: test7.txt -> test7.z78
+Input 501615 bytes
+Output 2006460 bytes
+Compression ratio 300.0%
+
+Compression: test8.txt -> test8.z78
+Input 1003235 bytes
+Output 4012940 bytes
+Compression ratio 300.0%
+
+Compression: test9.txt -> test9.z78
+Input 1504858 bytes
+Output 6019432 bytes
+Compression ratio 300.0%
+
+Compression: test10.txt -> test10.z78
+Input 2006478 bytes
+Output 8025912 bytes
+Compression ratio 300.0%
